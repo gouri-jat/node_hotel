@@ -7,6 +7,9 @@ const db = require('./db');
  const bodyParser = require('body-parser');
  app.use(bodyParser.json());
 
+ app.get('/', (req, res) => {
+  res.send('🚀 Welcome to Node Hotel API!');
+});
 
 
 const personRoutes = require('./routes/personRoutes');

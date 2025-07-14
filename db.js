@@ -1,4 +1,4 @@
- 
+ require('dotenv').config();
 const mongoose  = require('mongoose');
 
 //const mongoURL = 'mongodb://localhost:27017/hotel'
@@ -6,7 +6,7 @@ const mongodb = process.env.MONGODB_URI;
 
 mongoose.connect(mongodb)
   .then(() => console.log("✅ Connected to MongoDB Server"))
-  .catch((err) => console.error("❌ MongoDB Connection error:", err));
+  .catch((err) => console.error("❌ MongoDB Connection error:"));
 
 
 const db = mongoose.connection;
